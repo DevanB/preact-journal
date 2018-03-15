@@ -4,7 +4,7 @@ import { sortObjectsByDate, filterHiddenEntries, clearLocalStorage, getViewFromH
 const getInitialState = function() {
   let loggedIn = !!cookie.get('logged_in');
   if(!loggedIn) clearLocalStorage();
-  let entries = JSON.parse(localStorage.getItem('entries')) || undefined;
+  let entries = JSON.parse(localStorage.getItem('bootEntries')) || undefined;
   if(entries) entries = sortObjectsByDate(entries);
   let viewEntries;
   if(entries) viewEntries = filterHiddenEntries(entries);
@@ -28,4 +28,8 @@ const getInitialState = function() {
   return state;
 };
 
-export default getInitialState;
+const getRemainingEntries = function() {
+  return JSON.parse(localStorage.getItem('remainingEntries')) || undefined;
+};
+
+export default { getInitialState, getRemainingEntries };

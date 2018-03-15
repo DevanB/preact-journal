@@ -36,7 +36,9 @@ const applyFilters = function(query, list){
 };
 
 const clearLocalStorage = function(){
-  localStorage.removeItem('entries');
+  // localStorage.removeItem('entries');
+  localStorage.removeItem('bootEntries');
+  localStorage.removeItem('remainingEntries');
   localStorage.removeItem('timestamp');
   localStorage.removeItem('dark');
 };

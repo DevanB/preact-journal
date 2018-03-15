@@ -48,17 +48,17 @@ export default class App extends Component {
     fire('getEntries')();
   }
 
-  // componentDidUpdate() {
-  //   if(!remainingEntriesFetched) remainingEntriesFetched = true;
-  //   let remainingEntries = getRemainingEntries();
-  //   if(remainingEntries){
-  //     let entries = [].concat(this.state.entries, remainingEntries);
-  //     this.setState({
-  //       entries: entries,
-  //       viewEntries: applyFilters(this.state.filterText, entries)
-  //     });
-  //   }
-  // }
+  componentDidUpdate() {
+    if(!remainingEntriesFetched) remainingEntriesFetched = true;
+    let remainingEntries = getRemainingEntries();
+    if(remainingEntries){
+      let entries = [].concat(this.state.entries, remainingEntries);
+      this.setState({
+        entries: entries,
+        viewEntries: applyFilters(this.state.filterText, entries)
+      });
+    }
+  }
 
   render(props, state) {
     return (

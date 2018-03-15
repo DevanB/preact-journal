@@ -293,9 +293,6 @@ main {
 
 .entry-text {
   white-space: pre-wrap;
-}
-
-.entry-text:not(:focus) {
   min-height: calc(100vh - 500px);
 }
 

@@ -55,7 +55,8 @@ svg {
 }
 
 .app.dark .elevated {
-  filter: none;
+  /*filter: none;*/
+  box-shadow: none;
 }
 
 .entry-preview .entry-link {
@@ -183,7 +184,8 @@ main {
 }
 
 .elevated {
-  filter: drop-shadow(0 4px 4px #9c9c9c);
+  /*filter: drop-shadow(0 4px 4px #9c9c9c);*/
+  box-shadow: 0 5px 5px #c1c1c1;
 }
 
 .button--fab {
@@ -293,7 +295,7 @@ main {
 
 .entry-text {
   white-space: pre-wrap;
-  min-height: calc(100vh - 500px);
+  min-height: calc(100vh - 200px);
 }
 
 .list-item {

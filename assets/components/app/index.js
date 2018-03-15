@@ -49,7 +49,8 @@ export default class App extends Component {
   }
 
   componentDidUpdate() {
-    if(!remainingEntriesFetched) remainingEntriesFetched = true;
+    if(remainingEntriesFetched) return;
+    remainingEntriesFetched = true;
     let remainingEntries = getRemainingEntries();
     if(remainingEntries){
       let entries = [].concat(this.state.entries, remainingEntries);

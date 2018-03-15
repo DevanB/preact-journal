@@ -32,4 +32,4 @@ const getRemainingEntries = function() {
   return JSON.parse(localStorage.getItem('remainingEntries')) || undefined;
 };
 
-export default { getInitialState, getRemainingEntries };
+export { getInitialState, getRemainingEntries };

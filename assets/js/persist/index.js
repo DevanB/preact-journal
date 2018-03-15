@@ -9,7 +9,6 @@ export default function persist(el, state, cb) {
   if(state.entries){
     // localStorage.setItem('entries', JSON.stringify(state.entries));
     localStorage.setItem('remainingEntries', JSON.stringify(state.entries.splice(10)));
-    state.entries.slice(10);
     localStorage.setItem('bootEntries', JSON.stringify(state.entries));
   }
 }

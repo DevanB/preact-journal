@@ -34,11 +34,11 @@ app.use(jwtMW({
     return null;
   }
 }));
-app.get('/favicon.ico', function(req, res, next){
-  res.sendFile('favicon.ico', {root: './dist', maxAge: '30d'});
-  next();
-});
-app.use(express.static('dist', {maxAge: '0h'}));
+// app.get('/favicon.ico', function(req, res, next){
+//   res.sendFile('favicon.ico', {root: './dist', maxAge: '30d'});
+//   next();
+// });
+app.use(express.static('dist', {maxAge: '30d'}));
 require('./middleware/app-middleware')(app);
 require('./routes')(app);
 

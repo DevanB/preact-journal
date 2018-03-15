@@ -293,7 +293,7 @@ main {
 
 .entry-text {
   white-space: pre-wrap;
-  min-height: calc(100vh - 650px);
+  min-height: calc(100vh - 500px);
 }
 
 .list-item {
